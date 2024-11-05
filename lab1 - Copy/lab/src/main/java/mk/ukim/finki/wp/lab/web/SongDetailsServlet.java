@@ -47,11 +47,7 @@ public class SongDetailsServlet extends HttpServlet
 
         List<Artist> artists = selectedSong.getPerformers();
 
-
-        for (int i = 0; i < artists.size(); i++){
-            List<String> artistSongs = artists.get(i).getSongs();
-            webContext.setVariable("artists", artists);
-        }
+        webContext.setVariable("artists", artists);
         webContext.setVariable("selectedSong", selectedSong);
 
 
